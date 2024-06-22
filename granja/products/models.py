@@ -5,6 +5,7 @@ from django.db import models
 class categories(models.Model):
     name = models.CharField(max_length=150, verbose_name='Nombre')
     description = models.TextField(verbose_name='Descripción')
+    image = models.ImageField(default='null', blank=True, null=True, verbose_name="Foto", upload_to="categories")
     create_at = models.DateTimeField(auto_now_add=True, verbose_name='Creado')
     update_at = models.DateTimeField(auto_now=True, verbose_name='Editado')
     
