@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Persons, TipeDocument
 # Register your models here.
+
+
 class PersonAdmin(admin.ModelAdmin):
     readonly_fields = ('user', 'create_at', 'update_at')
     search_fields = ('typeDocument', 'cedula', 'user__username', 'birthDay')
